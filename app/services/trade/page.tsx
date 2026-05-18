@@ -57,30 +57,35 @@ export const metadata = {
 export default function TradePage() {
   return (
     <main className="bg-white">
-      <section className="relative overflow-hidden bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#FF7A00]/20 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+            <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/trade-bg.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/75 via-[#040237]/45 to-[#040237]/20" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:px-10">
           <div>
-            <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+            <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FFD08A] drop-shadow-sm">
               PCA Trade
             </p>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+
+            <h1 className="text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl">
               Procurement coordination that turns sourcing into execution.
             </h1>
-            <p className="mt-7 text-lg leading-8 text-white/75">
+
+            <p className="mt-6 text-lg leading-8 text-white/85 drop-shadow-md">
               PCA Trade helps businesses coordinate supplier communication,
               purchase steps, documentation, and procurement execution with a
               structured process designed for cross-border trade realities.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
                 asChild
                 size="lg"
                 className="bg-[#FF7A00] hover:bg-[#e66e00]"
               >
                 <Link href="/start-sourcing-request">
-                  Start a Trade Request <ArrowRight className="ml-2 h-5 w-5" />
+                  Start a Trade Request
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
 
@@ -95,12 +100,14 @@ export default function TradePage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-            <div className="rounded-[1.5rem] bg-white p-5 text-slate-900">
+          <div className="rounded-[2rem] border border-white/15 bg-white/15 p-5 text-white shadow-2xl backdrop-blur-xl">
+            <div className="rounded-[1.5rem] border border-white/10 bg-white/90 p-5 text-slate-900 shadow-xl">
               <Handshake className="mb-6 h-10 w-10 text-[#FF7A00]" />
+
               <h2 className="text-2xl font-bold text-[#040237]">
                 From supplier interest to purchase coordination
               </h2>
+
               <p className="mt-4 leading-7 text-slate-600">
                 PCA Trade is designed for clients who need more than supplier
                 names. We support the steps that turn sourcing decisions into

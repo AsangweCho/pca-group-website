@@ -59,27 +59,28 @@ export default function LogisticsPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-[#FF7A00]/20 blur-3xl" />
+            {/* HERO */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/logistics-bg.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/75 via-[#040237]/45 to-[#040237]/20" />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:px-10">
           <div>
-            <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+            <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FFD08A] drop-shadow-sm">
               PCA Logistics
             </p>
 
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl">
               Move goods across Africa with structured execution support.
             </h1>
 
-            <p className="mt-7 text-lg leading-8 text-white/75">
+            <p className="mt-6 text-lg leading-8 text-white/85 drop-shadow-md">
               PCA Logistics helps businesses coordinate freight, customs support,
               warehousing, shipment movement, and delivery execution across
               African trade corridors.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
                 asChild
                 size="lg"
@@ -102,8 +103,8 @@ export default function LogisticsPage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-            <div className="rounded-[1.5rem] bg-white p-5 text-slate-900">
+          <div className="rounded-[2rem] border border-white/15 bg-white/15 p-5 text-white shadow-2xl backdrop-blur-xl">
+            <div className="rounded-[1.5rem] border border-white/10 bg-white/90 p-5 text-slate-900 shadow-xl">
               <Globe2 className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
               <h2 className="text-2xl font-bold text-[#040237]">
@@ -133,39 +134,6 @@ export default function LogisticsPage() {
           </div>
         </div>
       </section>
-
-      {/* BENEFITS */}
-      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 max-w-3xl">
-            <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
-              What you get
-            </p>
-
-            <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
-              Logistics support built for real trade execution.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              Moving goods across African markets requires planning, coordination,
-              documentation, and execution discipline. PCA helps reduce that
-              complexity.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit) => (
-              <Card key={benefit} className="border-slate-200">
-                <CardContent className="p-5">
-                  <ShieldCheck className="mb-5 h-7 w-7 text-[#FF7A00]" />
-                  <p className="font-semibold text-[#040237]">{benefit}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* PROCESS */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
