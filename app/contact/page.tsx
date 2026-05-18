@@ -22,13 +22,13 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="bg-slate-50">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Contact PCA
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
             Speak to us about sourcing, logistics, commodities, or market entry.
           </h1>
 
@@ -40,10 +40,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-8">
+      <section className="px-6 py-14 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <Card className="border-slate-200 bg-white lg:col-span-2">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <h2 className="text-3xl font-bold text-[#040237]">
                 Send PCA a message
               </h2>
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
           <div className="space-y-6">
             <Card className="border-[#FF7A00] bg-[#040237] text-white">
-              <CardContent className="p-7">
+              <CardContent className="p-5">
                 <MessageCircle className="mb-5 h-9 w-9 text-[#FF7A00]" />
                 <h3 className="text-2xl font-bold">Direct contact</h3>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
             </Card>
 
             <Card className="border-slate-200 bg-white">
-              <CardContent className="p-7">
+              <CardContent className="p-5">
                 <Clock className="mb-5 h-8 w-8 text-[#FF7A00]" />
                 <h3 className="text-xl font-bold text-[#040237]">
                   Response expectation

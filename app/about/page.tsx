@@ -48,13 +48,13 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             About PCA
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
             Building trusted trade execution infrastructure for African commerce.
           </h1>
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
@@ -112,9 +112,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-3xl">
+          <div className="mb-8 max-w-3xl">
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               PCA Group direction
             </p>
@@ -130,13 +130,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-3">
             {pillars.map((pillar) => {
               const Icon = pillar.icon;
 
               return (
                 <Card key={pillar.title} className="border-slate-200 bg-white">
-                  <CardContent className="p-7">
+                  <CardContent className="p-5">
                     <Icon className="mb-6 h-9 w-9 text-[#FF7A00]" />
                     <h3 className="text-xl font-bold text-[#040237]">
                       {pillar.title}
@@ -152,10 +152,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <Card className="border-slate-200 lg:col-span-2">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <Network className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
               <h2 className="text-3xl font-bold text-[#040237]">
@@ -188,7 +188,7 @@ export default function AboutPage() {
           </Card>
 
           <Card className="border-[#FF7A00] bg-[#040237] text-white">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <Handshake className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
               <h3 className="text-2xl font-bold">
@@ -212,7 +212,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <Building2 className="mb-6 h-10 w-10 text-[#FF7A00]" />

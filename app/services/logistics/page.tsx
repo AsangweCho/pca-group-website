@@ -59,7 +59,7 @@ export default function LogisticsPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="relative overflow-hidden bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-[#FF7A00]/20 blur-3xl" />
 
@@ -69,7 +69,7 @@ export default function LogisticsPage() {
               PCA Logistics
             </p>
 
-            <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               Move goods across Africa with structured execution support.
             </h1>
 
@@ -102,8 +102,8 @@ export default function LogisticsPage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
-            <div className="rounded-[1.5rem] bg-white p-6 text-slate-900">
+          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div className="rounded-[1.5rem] bg-white p-5 text-slate-900">
               <Globe2 className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
               <h2 className="text-2xl font-bold text-[#040237]">
@@ -135,9 +135,9 @@ export default function LogisticsPage() {
       </section>
 
       {/* BENEFITS */}
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-3xl">
+          <div className="mb-8 max-w-3xl">
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               What you get
             </p>
@@ -153,10 +153,10 @@ export default function LogisticsPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
               <Card key={benefit} className="border-slate-200">
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   <ShieldCheck className="mb-5 h-7 w-7 text-[#FF7A00]" />
                   <p className="font-semibold text-[#040237]">{benefit}</p>
                 </CardContent>
@@ -167,7 +167,7 @@ export default function LogisticsPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-slate-50 px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
@@ -188,7 +188,7 @@ export default function LogisticsPage() {
             {process.map((step, index) => (
               <div
                 key={step.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6"
+                className="rounded-2xl border border-slate-200 bg-white p-5"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FF7A00] font-bold text-white">
                   {index + 1}
@@ -204,10 +204,10 @@ export default function LogisticsPage() {
       </section>
 
       {/* WHO IT'S FOR */}
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <Card className="border-slate-200 lg:col-span-2">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <PackageCheck className="mb-6 h-9 w-9 text-[#FF7A00]" />
 
               <h2 className="text-3xl font-bold text-[#040237]">
@@ -226,7 +226,7 @@ export default function LogisticsPage() {
           </Card>
 
           <Card className="border-[#FF7A00] bg-[#040237] text-white">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <Truck className="mb-6 h-9 w-9 text-[#FF7A00]" />
 
               <h3 className="text-2xl font-bold">Need logistics support?</h3>
@@ -248,10 +248,10 @@ export default function LogisticsPage() {
       </section>
 
       {/* VISUAL TRADE BLOCK */}
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
           <Card className="border-white/10 bg-white/10 text-white backdrop-blur">
-            <CardContent className="p-6">
+            <CardContent className="p-5">
               <Ship className="mb-5 h-8 w-8 text-[#FF7A00]" />
               <h3 className="text-xl font-bold">Cross-Border Movement</h3>
               <p className="mt-4 text-white/70">
@@ -261,7 +261,7 @@ export default function LogisticsPage() {
           </Card>
 
           <Card className="border-white/10 bg-white/10 text-white backdrop-blur">
-            <CardContent className="p-6">
+            <CardContent className="p-5">
               <Warehouse className="mb-5 h-8 w-8 text-[#FF7A00]" />
               <h3 className="text-xl font-bold">Warehousing Support</h3>
               <p className="mt-4 text-white/70">
@@ -271,7 +271,7 @@ export default function LogisticsPage() {
           </Card>
 
           <Card className="border-white/10 bg-white/10 text-white backdrop-blur">
-            <CardContent className="p-6">
+            <CardContent className="p-5">
               <Truck className="mb-5 h-8 w-8 text-[#FF7A00]" />
               <h3 className="text-xl font-bold">Delivery Coordination</h3>
               <p className="mt-4 text-white/70">

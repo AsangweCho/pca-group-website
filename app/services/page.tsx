@@ -13,12 +13,12 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             PCA Services
           </p>
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
             Source, buy, move and expand with one coordinated trade partner.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-white/75">
@@ -29,12 +29,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-5">
           {services.map((service) => (
             <Link key={service.href} href={service.href}>
               <Card className="h-full border-slate-200 transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-xl">
-                <CardContent className="flex h-full flex-col p-6">
+                <CardContent className="flex h-full flex-col p-5">
                   <Route className="mb-6 h-8 w-8 text-[#FF7A00]" />
                   <h2 className="text-xl font-bold text-[#040237]">
                     {service.name}
@@ -52,8 +52,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-20 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-[2rem] bg-white p-8 shadow-sm lg:flex-row lg:items-center lg:p-12">
+      <section className="bg-slate-50 px-6 py-14 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 rounded-[2rem] bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:p-12">
           <div>
             <h2 className="text-3xl font-bold text-[#040237]">
               Not sure which service fits your request?

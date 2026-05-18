@@ -21,12 +21,12 @@ export const metadata = {
 export default function StartSourcingRequestPage() {
   return (
     <main className="bg-slate-50">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Start a Request
           </p>
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
             Tell us what you want to source, move, or execute across Africa.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-white/75">
@@ -37,10 +37,10 @@ export default function StartSourcingRequestPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-8">
+      <section className="px-6 py-14 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <Card className="border-slate-200 bg-white lg:col-span-2">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <div className="mb-8">
                 <ClipboardList className="mb-5 h-9 w-9 text-[#FF7A00]" />
                 <h2 className="text-3xl font-bold text-[#040237]">
@@ -174,7 +174,7 @@ export default function StartSourcingRequestPage() {
 
           <div className="space-y-6">
             <Card className="border-[#FF7A00] bg-[#040237] text-white">
-              <CardContent className="p-7">
+              <CardContent className="p-5">
                 <ShieldCheck className="mb-5 h-9 w-9 text-[#FF7A00]" />
                 <h3 className="text-2xl font-bold">What happens next?</h3>
                 <div className="mt-6 space-y-4 text-sm text-white/75">
@@ -194,7 +194,7 @@ export default function StartSourcingRequestPage() {
             </Card>
 
             <Card className="border-slate-200 bg-white">
-              <CardContent className="p-7">
+              <CardContent className="p-5">
                 <h3 className="text-xl font-bold text-[#040237]">
                   Contact PCA directly
                 </h3>

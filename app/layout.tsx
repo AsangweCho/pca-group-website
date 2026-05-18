@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   metadataBase: new URL("https://procureconsultafrica.com"),
@@ -76,13 +65,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
+<body
+ className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 font-sans antialiased"
+>
+  <Navbar />
+
+  <div className="mx-auto max-w-[1600px] px-3 py-3 sm:px-4 sm:py-4">
+    {children}
+    <Footer />
+  </div>
+</body>
     </html>
   );
 }

@@ -39,13 +39,13 @@ export const metadata = {
 export default function InsightsPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Insights
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
             Practical intelligence for sourcing, trade, logistics, and African market entry.
           </h1>
 
@@ -57,9 +57,9 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
               <BookOpen className="mb-5 h-10 w-10 text-[#FF7A00]" />
               <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
@@ -77,14 +77,14 @@ export default function InsightsPage() {
             </Button>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-3">
             {articles.map((article) => {
               const Icon = article.icon;
 
               return (
                 <Link key={article.href} href={article.href}>
                   <Card className="h-full border-slate-200 transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-xl">
-                    <CardContent className="flex h-full flex-col p-7">
+                    <CardContent className="flex h-full flex-col p-5">
                       <Icon className="mb-6 h-9 w-9 text-[#FF7A00]" />
 
                       <p className="mb-3 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
@@ -111,8 +111,8 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-20 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-[2rem] bg-white p-8 shadow-sm lg:flex-row lg:items-center lg:p-12">
+      <section className="bg-slate-50 px-6 py-14 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 rounded-[2rem] bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:p-12">
           <div>
             <h2 className="text-3xl font-bold text-[#040237]">
               Need practical trade support now?

@@ -7,12 +7,12 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-4xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Privacy Policy
           </p>
-          <h1 className="text-5xl font-bold tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight">
             Privacy Policy
           </h1>
           <p className="mt-6 text-white/75">
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-8">
+      <section className="px-6 py-14 lg:px-8">
         <div className="mx-auto max-w-4xl space-y-8 text-slate-700">
           <p>
             Procure Consult Africa, a PCA Group company, respects the privacy of

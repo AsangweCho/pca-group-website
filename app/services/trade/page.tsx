@@ -57,14 +57,14 @@ export const metadata = {
 export default function TradePage() {
   return (
     <main className="bg-white">
-      <section className="relative overflow-hidden bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="relative overflow-hidden bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#FF7A00]/20 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               PCA Trade
             </p>
-            <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               Procurement coordination that turns sourcing into execution.
             </h1>
             <p className="mt-7 text-lg leading-8 text-white/75">
@@ -95,8 +95,8 @@ export default function TradePage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
-            <div className="rounded-[1.5rem] bg-white p-6 text-slate-900">
+          <div className="rounded-[2rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div className="rounded-[1.5rem] bg-white p-5 text-slate-900">
               <Handshake className="mb-6 h-10 w-10 text-[#FF7A00]" />
               <h2 className="text-2xl font-bold text-[#040237]">
                 From supplier interest to purchase coordination
@@ -125,9 +125,9 @@ export default function TradePage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-3xl">
+          <div className="mb-8 max-w-3xl">
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               What you get
             </p>
@@ -141,10 +141,10 @@ export default function TradePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
               <Card key={benefit} className="border-slate-200">
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   <ShieldCheck className="mb-5 h-7 w-7 text-[#FF7A00]" />
                   <p className="font-semibold text-[#040237]">{benefit}</p>
                 </CardContent>
@@ -154,7 +154,7 @@ export default function TradePage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
@@ -174,7 +174,7 @@ export default function TradePage() {
             {process.map((step, index) => (
               <div
                 key={step.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6"
+                className="rounded-2xl border border-slate-200 bg-white p-5"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FF7A00] font-bold text-white">
                   {index + 1}
@@ -187,10 +187,10 @@ export default function TradePage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <Card className="border-slate-200 lg:col-span-2">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <ClipboardList className="mb-6 h-9 w-9 text-[#FF7A00]" />
               <h2 className="text-3xl font-bold text-[#040237]">
                 Who this service is for
@@ -207,7 +207,7 @@ export default function TradePage() {
           </Card>
 
           <Card className="border-[#FF7A00] bg-[#040237] text-white">
-            <CardContent className="p-8">
+            <CardContent className="p-5">
               <FileCheck2 className="mb-6 h-9 w-9 text-[#FF7A00]" />
               <h3 className="text-2xl font-bold">Need procurement support?</h3>
               <p className="mt-4 leading-7 text-white/70">

@@ -54,13 +54,13 @@ export const metadata = {
 export default function HowItWorksPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             How It Works
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
             A clear process from request to execution.
           </h1>
 
@@ -72,9 +72,9 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {steps.map((step, index) => {
               const Icon = step.icon;
 
@@ -83,7 +83,7 @@ export default function HowItWorksPage() {
                   key={step.title}
                   className="border-slate-200 transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-xl"
                 >
-                  <CardContent className="p-7">
+                  <CardContent className="p-5">
                     <div className="mb-6 flex items-center justify-between">
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#040237] text-[#FF7A00]">
                         <Icon className="h-6 w-6" />
@@ -109,7 +109,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
@@ -148,8 +148,8 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-20 text-white lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+      <section className="bg-[#040237] px-6 py-14 text-white lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-4xl font-bold tracking-tight">
               Ready to begin?

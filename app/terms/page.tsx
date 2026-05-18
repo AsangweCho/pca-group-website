@@ -8,17 +8,17 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-4xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Terms
           </p>
-          <h1 className="text-5xl font-bold tracking-tight">Website Terms</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Website Terms</h1>
           <p className="mt-6 text-white/75">Last updated: May 2026</p>
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-8">
+      <section className="px-6 py-14 lg:px-8">
         <div className="mx-auto max-w-4xl space-y-8 text-slate-700">
           <p>
             These terms govern the use of the Procure Consult Africa website.

@@ -54,13 +54,13 @@ export const metadata = {
 export default function IndustriesPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-24 text-white lg:px-8">
+      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             Industries
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
             Industry-focused trade execution across African markets.
           </h1>
 
@@ -72,9 +72,9 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 max-w-3xl">
+          <div className="mb-10 max-w-3xl">
             <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
               Sectors we actively support
             </h2>
@@ -86,7 +86,7 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => {
               const Icon = industry.icon;
 
@@ -95,7 +95,7 @@ export default function IndustriesPage() {
                   key={industry.title}
                   className="border-slate-200 transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-xl"
                 >
-                  <CardContent className="p-7">
+                  <CardContent className="p-5">
                     <Icon className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
                     <h3 className="text-2xl font-bold text-[#040237]">
@@ -113,7 +113,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-24 lg:px-8">
+      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
           <div>
             <Wrench className="mb-6 h-10 w-10 text-[#FF7A00]" />
@@ -149,8 +149,8 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-20 text-white lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+      <section className="bg-[#040237] px-6 py-14 text-white lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-4xl font-bold tracking-tight">
               Need support in your industry?
