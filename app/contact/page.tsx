@@ -1,11 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
+  CheckCircle2,
   Clock,
   Mail,
   MapPin,
   MessageCircle,
   Phone,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,173 +18,267 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/lib/site";
 
-export const metadata = {
-  title: "Contact | Procure Consult Africa",
-  description:
-    "Contact Procure Consult Africa for sourcing, procurement coordination, logistics, commodity sourcing, and Africa market entry support.",
-};
-
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    full_name: "",
+    company: "",
+    email: "",
+    phone: "",
+    country: "",
+    inquiry_type: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "contact",
+          payload: form,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
+
+      setSuccess(true);
+
+      setForm({
+        full_name: "",
+        company: "",
+        email: "",
+        phone: "",
+        country: "",
+        inquiry_type: "",
+        message: "",
+      });
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <main className="bg-slate-50">
-      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+    <main className="bg-white">
+      {/* HERO */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/market-entry-bg.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/80 via-[#040237]/50 to-[#040237]/20" />
+
+        <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
+          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FFD08A]">
             Contact PCA
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
-            Speak to us about sourcing, logistics, commodities, or market entry.
+          <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl">
+            Let’s discuss your sourcing, logistics, procurement, or Africa
+            expansion plans.
           </h1>
 
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-white/75">
-            Tell us what you need. Our team will help identify the right path for
-            your sourcing, procurement, logistics, or African market execution
-            request.
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">
+            PCA helps businesses source products, coordinate procurement,
+            structure logistics, and execute market opportunities across Africa.
           </p>
         </div>
       </section>
 
-      <section className="px-6 py-14 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
-          <Card className="border-slate-200 bg-white lg:col-span-2">
-            <CardContent className="p-5">
-              <h2 className="text-3xl font-bold text-[#040237]">
-                Send PCA a message
-              </h2>
-
-              <p className="mt-3 text-slate-600">
-                Use this form for consultations, partnership inquiries, or
-                general business requests.
-              </p>
-
-              <form className="mt-8 grid gap-5">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                      Full name
-                    </label>
-                    <Input placeholder="Your full name" />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                      Company
-                    </label>
-                    <Input placeholder="Company or business name" />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                      Email
-                    </label>
-                    <Input type="email" placeholder="you@example.com" />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                      Phone / WhatsApp
-                    </label>
-                    <Input placeholder="+237..." />
-                  </div>
-                </div>
-
+      {/* BODY */}
+      <section className="mt-4 px-5 py-12 sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
+          <Card className="border-slate-200 shadow-lg lg:col-span-2">
+            <CardContent className="p-6 lg:p-8">
+              <div className="flex items-start gap-4">
+                <ShieldCheck className="mt-1 h-8 w-8 text-[#FF7A00]" />
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                    Inquiry type
-                  </label>
-                  <select className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
-                    <option>Select inquiry type</option>
+                  <h2 className="text-3xl font-bold text-[#040237]">
+                    Send PCA your request
+                  </h2>
+
+                  <p className="mt-2 text-slate-600">
+                    Tell us what you need and our team will respond.
+                  </p>
+                </div>
+              </div>
+
+              <form onSubmit={handleSubmit} className="mt-8 grid gap-5">
+                <div className="grid gap-5 md:grid-cols-2">
+                  <Input
+                    name="full_name"
+                    placeholder="Full name"
+                    value={form.full_name}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <Input
+                    name="company"
+                    placeholder="Company / Business"
+                    value={form.company}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <Input
+                    name="phone"
+                    placeholder="Phone / WhatsApp"
+                    value={form.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <Input
+                    name="country"
+                    placeholder="Country"
+                    value={form.country}
+                    onChange={handleChange}
+                  />
+
+                  <select
+                    name="inquiry_type"
+                    value={form.inquiry_type}
+                    onChange={handleChange}
+                    className="h-11 rounded-md border border-input px-3 text-sm"
+                    required
+                  >
+                    <option value="">Select inquiry type</option>
                     <option>Sourcing request</option>
                     <option>Procurement coordination</option>
                     <option>Logistics support</option>
                     <option>Commodity sourcing</option>
                     <option>Market entry consultation</option>
                     <option>Partnership</option>
-                    <option>Other</option>
                   </select>
                 </div>
 
-                <div>
-                  <label className="mb-2 block text-sm font-semibold text-[#040237]">
-                    Message
-                  </label>
-                  <Textarea
-                    rows={7}
-                    placeholder="Tell us what you need and where you need support."
-                  />
-                </div>
+                <Textarea
+                  name="message"
+                  rows={7}
+                  placeholder="Tell us what you need..."
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                />
+
+                {success && (
+                  <p className="text-sm font-medium text-green-600">
+                    Request sent successfully.
+                  </p>
+                )}
+
+                {error && (
+                  <p className="text-sm font-medium text-red-600">
+                    {error}
+                  </p>
+                )}
 
                 <Button
-                  type="button"
+                  type="submit"
                   size="lg"
-                  className="mt-3 bg-[#FF7A00] hover:bg-[#e66e00]"
+                  disabled={loading}
+                  className="bg-[#FF7A00] hover:bg-[#e66e00]"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Request"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-
-                <p className="text-sm text-slate-500">
-                  Form submission will be connected in the next technical step.
-                </p>
               </form>
             </CardContent>
           </Card>
 
+          {/* SIDEBAR */}
           <div className="space-y-6">
-            <Card className="border-[#FF7A00] bg-[#040237] text-white">
-              <CardContent className="p-5">
+            <Card className="border-[#040237] bg-[#040237] text-white shadow-xl">
+              <CardContent className="p-6">
                 <MessageCircle className="mb-5 h-9 w-9 text-[#FF7A00]" />
-                <h3 className="text-2xl font-bold">Direct contact</h3>
 
-                <div className="mt-6 space-y-5 text-sm text-white/75">
-                  <p className="flex items-start gap-3">
-                    <Phone className="mt-0.5 h-5 w-5 text-[#FF7A00]" />
-                    <span>{siteConfig.phone}</span>
+                <h3 className="text-2xl font-bold">Talk directly to PCA</h3>
+
+                <div className="mt-6 space-y-5 text-sm text-white/80">
+                  <p className="flex gap-3">
+                    <Phone className="h-5 w-5 text-[#FF7A00]" />
+                    {siteConfig.phone}
                   </p>
 
-                  <p className="flex items-start gap-3">
-                    <MessageCircle className="mt-0.5 h-5 w-5 text-[#FF7A00]" />
-                    <span>WhatsApp: {siteConfig.whatsapp}</span>
+                  <p className="flex gap-3">
+                    <Mail className="h-5 w-5 text-[#FF7A00]" />
+                    {siteConfig.email}
                   </p>
 
-                  <p className="flex items-start gap-3">
-                    <Mail className="mt-0.5 h-5 w-5 text-[#FF7A00]" />
-                    <span>{siteConfig.email}</span>
-                  </p>
-
-                  <p className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 text-[#FF7A00]" />
-                    <span>{siteConfig.address}</span>
+                  <p className="flex gap-3">
+                    <MapPin className="h-5 w-5 text-[#FF7A00]" />
+                    {siteConfig.address}
                   </p>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-slate-200 bg-white">
-              <CardContent className="p-5">
-                <Clock className="mb-5 h-8 w-8 text-[#FF7A00]" />
-                <h3 className="text-xl font-bold text-[#040237]">
-                  Response expectation
-                </h3>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  For sourcing and logistics requests, include product details,
-                  quantity, destination, timeline, and any photos or
-                  specifications available.
-                </p>
 
                 <Button
                   asChild
-                  className="mt-6 bg-[#040237] hover:bg-[#09065a]"
+                  className="mt-6 w-full bg-[#FF7A00] hover:bg-[#e66e00]"
                 >
-                  <Link href="/start-sourcing-request">
-                    Start Request
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href={`https://wa.me/${siteConfig.whatsapp}`}>
+                    Chat on WhatsApp
                   </Link>
                 </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardContent className="p-6">
+                <Clock className="mb-5 h-8 w-8 text-[#FF7A00]" />
+
+                <h3 className="text-xl font-bold text-[#040237]">
+                  Faster responses
+                </h3>
+
+                <div className="mt-5 space-y-3">
+                  {[
+                    "Product or service needed",
+                    "Destination country",
+                    "Timeline",
+                    "Specifications",
+                  ].map((item) => (
+                    <div key={item} className="flex gap-3 text-sm">
+                      <CheckCircle2 className="h-5 w-5 text-[#FF7A00]" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
