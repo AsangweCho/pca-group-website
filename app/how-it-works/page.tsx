@@ -54,8 +54,10 @@ export const metadata = {
 export default function HowItWorksPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+  <div className="absolute inset-0 bg-[url('/images/trade-bg.jpg')] bg-cover bg-center opacity-75" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/80 via-[#040237]/50 to-[#040237]/20" />
+        <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
           <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
             How It Works
           </p>
@@ -85,7 +87,7 @@ export default function HowItWorksPage() {
                 >
                   <CardContent className="p-5">
                     <div className="mb-6 flex items-center justify-between">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#040237] text-[#FF7A00]">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#040237] to-[#09065a] text-[#FF7A00] shadow-lg">
                         <Icon className="h-6 w-6" />
                       </div>
 
@@ -109,8 +111,10 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+  <div className="absolute inset-0 bg-[url('/images/logistics-bg.jpg')] bg-cover bg-center opacity-65" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/85" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:px-10">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               Why the process matters
@@ -148,7 +152,9 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-14 text-white lg:px-8">
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+  <div className="absolute inset-0 bg-[url('/images/market-entry-bg.jpg')] bg-cover bg-center opacity-70" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/80 via-[#FF7A00]/55 to-[#040237]/40" />
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-4xl font-bold tracking-tight">

@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Procure Consult Africa",
     images: [
       {
-        url: "/logos/pca-logo.png",
+        url: "/logos/pca-logo.jpg",
         width: 1200,
         height: 630,
       },
@@ -48,13 +48,13 @@ export const metadata = {
     title: "Procure Consult Africa",
     description:
       "Source, buy, move, and expand across Africa.",
-    images: ["/logos/pca-logo.png"],
+    images: ["/logos/pca-logo.jpg"],
   },
 
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/logos/pca-icon.png",
+    apple: "/logos/pca-icon.jpg",
   },
 };
 

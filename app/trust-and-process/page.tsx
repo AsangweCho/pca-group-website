@@ -54,17 +54,21 @@ export const metadata = {
 export default function TrustAndProcessPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+      {/* HERO */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/logistics-bg.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/85 via-[#040237]/55 to-[#040237]/20" />
+
+        <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
+          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FFD08A] drop-shadow-sm">
             Trust & Process
           </p>
 
-          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl">
             Trade requires trust. PCA builds it into the process.
           </h1>
 
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-white/75">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85 drop-shadow-md">
             PCA supports clients with supplier review, transparent
             communication, documented execution, and coordinated trade support
             from request to delivery.
@@ -72,6 +76,7 @@ export default function TrustAndProcessPage() {
         </div>
       </section>
 
+      {/* TRUST ARCHITECTURE */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
@@ -80,7 +85,8 @@ export default function TrustAndProcessPage() {
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
-              Designed to reduce uncertainty before money, goods, and time are committed.
+              Designed to reduce uncertainty before money, goods, and time are
+              committed.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -97,13 +103,15 @@ export default function TrustAndProcessPage() {
               return (
                 <Card
                   key={block.title}
-                  className="border-slate-200 transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-xl"
+                  className="border-slate-200 shadow-lg transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-2xl"
                 >
-                  <CardContent className="p-5">
+                  <CardContent className="p-6">
                     <Icon className="mb-6 h-9 w-9 text-[#FF7A00]" />
+
                     <h3 className="text-xl font-bold text-[#040237]">
                       {block.title}
                     </h3>
+
                     <p className="mt-4 leading-7 text-slate-600">
                       {block.text}
                     </p>
@@ -115,8 +123,12 @@ export default function TrustAndProcessPage() {
         </div>
       </section>
 
-      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
+      {/* PROCESS SAFEGUARDS */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/source-bg.jpg')] bg-cover bg-center opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/80" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:px-10">
           <div>
             <ShieldCheck className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
@@ -142,7 +154,7 @@ export default function TrustAndProcessPage() {
             {processSafeguards.map((item) => (
               <div
                 key={item}
-                className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5"
+                className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm backdrop-blur"
               >
                 <BadgeCheck className="mt-1 h-5 w-5 text-[#FF7A00]" />
                 <p className="text-slate-700">{item}</p>
@@ -152,10 +164,11 @@ export default function TrustAndProcessPage() {
         </div>
       </section>
 
+      {/* CLIENT EXPECTATIONS */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
-          <Card className="border-slate-200 lg:col-span-2">
-            <CardContent className="p-5">
+          <Card className="border-slate-200 shadow-lg lg:col-span-2">
+            <CardContent className="p-6">
               <ClipboardCheck className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
               <h2 className="text-3xl font-bold text-[#040237]">
@@ -180,15 +193,13 @@ export default function TrustAndProcessPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-[#FF7A00] bg-[#040237] text-white">
-            <CardContent className="p-5">
+          <Card className="border-[#FF7A00] bg-[#040237] text-white shadow-xl">
+            <CardContent className="p-6">
               <ShieldCheck className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
-              <h3 className="text-2xl font-bold">
-                Start with clarity.
-              </h3>
+              <h3 className="text-2xl font-bold">Start with clarity.</h3>
 
-              <p className="mt-4 leading-7 text-white/70">
+              <p className="mt-4 leading-7 text-white/75">
                 The best way to begin is to submit your request with product,
                 quantity, destination, timeline, and any available
                 specifications.
@@ -205,20 +216,24 @@ export default function TrustAndProcessPage() {
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-14 text-white lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
+      {/* FINAL CTA */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/trade-bg.jpg')] bg-cover bg-center opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/80 via-[#FF7A00]/55 to-[#040237]/40" />
+
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-14 text-white sm:px-8 lg:flex-row lg:items-center lg:px-10">
           <div>
             <h2 className="text-4xl font-bold tracking-tight">
               Better trade begins with a better process.
             </h2>
 
-            <p className="mt-4 max-w-2xl text-white/75">
+            <p className="mt-4 max-w-2xl text-white/85">
               PCA helps clients approach sourcing, procurement, logistics, and
               market entry with more structure and less uncertainty.
             </p>
           </div>
 
-          <Button asChild size="lg" className="bg-[#FF7A00] hover:bg-[#e66e00]">
+          <Button asChild size="lg" className="bg-[#040237] hover:bg-[#09065a]">
             <Link href="/contact">
               Speak to PCA
               <ArrowRight className="ml-2 h-5 w-5" />

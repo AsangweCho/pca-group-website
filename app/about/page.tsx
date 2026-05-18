@@ -2,243 +2,200 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
-  Building2,
+  CheckCircle2,
   Globe2,
-  Handshake,
-  Network,
   ShieldCheck,
-  Truck,
+  Users2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const pillars = [
   {
-    title: "Trade Execution",
-    text: "We help clients move from sourcing interest to practical procurement, logistics, and delivery coordination.",
-    icon: Truck,
+    title: "Execution-focused",
+    text: "PCA is built around practical business execution, not theoretical advisory. We help clients move from opportunity to action.",
+    icon: ShieldCheck,
   },
   {
-    title: "Market Access",
-    text: "We support diaspora and international businesses that need trusted local execution across African markets.",
+    title: "Africa-grounded",
+    text: "Our understanding is shaped by operating realities across African markets, supplier ecosystems, logistics corridors, and local execution environments.",
     icon: Globe2,
   },
   {
-    title: "Structured Trust",
-    text: "We use supplier review, documentation, communication, and process clarity to reduce trade uncertainty.",
-    icon: ShieldCheck,
+    title: "Business-oriented",
+    text: "We work with entrepreneurs, diaspora businesses, importers, distributors, and companies seeking reliable African execution support.",
+    icon: Users2,
   },
 ];
 
-const values = [
-  "Practical execution over empty promises",
-  "Clear communication through every step",
-  "Local market understanding",
-  "Client trust and transaction discipline",
-  "Long-term trade relationships",
-  "Pan-African growth mindset",
+const trustPoints = [
+  "Structured sourcing and procurement review",
+  "Practical logistics coordination support",
+  "Supplier option visibility before commitment",
+  "Execution guidance based on real trade conditions",
+  "Communication discipline throughout the process",
 ];
 
 export const metadata = {
   title: "About | Procure Consult Africa",
   description:
-    "Learn about Procure Consult Africa, a PCA Group company helping businesses source, buy, move, and expand across Africa.",
+    "Learn about Procure Consult Africa and how PCA helps businesses source, procure, move goods, and expand across African markets.",
 };
 
 export default function AboutPage() {
   return (
     <main className="bg-white">
-      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+      {/* HERO */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] text-white shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/source-bg.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/80 via-[#040237]/50 to-[#040237]/20" />
+
+        <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
+          <p className="mb-5 text-sm font-bold uppercase tracking-wider text-[#FFD08A]">
             About PCA
           </p>
 
-          <h1 className="max-w-5xl text-4xl font-bold tracking-tight md:text-5xl">
-            Building trusted trade execution infrastructure for African commerce.
+          <h1 className="max-w-5xl text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl">
+            Practical African trade execution for businesses that need reliable
+            local support.
           </h1>
 
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-white/75">
-            Procure Consult Africa is a PCA Group company helping businesses
-            source, buy, move, and expand across Africa through structured
-            procurement, logistics, commodity, and market access support.
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">
+            Procure Consult Africa helps businesses source products, coordinate
+            procurement, structure logistics, access commodities, and explore
+            African market opportunities with stronger execution clarity.
           </p>
-
-          <div className="mt-10">
-            <Button asChild size="lg" className="bg-[#FF7A00] hover:bg-[#e66e00]">
-              <Link href="/start-sourcing-request">
-                Start a Sourcing Request
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-          <div>
-            <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
-              Our role
-            </p>
-
-            <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
-              PCA exists to make trade across Africa easier to execute.
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-lg leading-8 text-slate-600">
-            <p>
-              Many businesses know what they want to buy, where they want to
-              expand, or which markets they want to reach. The real challenge is
-              execution: finding reliable suppliers, coordinating purchase steps,
-              managing logistics, handling local realities, and keeping the
-              process transparent.
-            </p>
-
-            <p>
-              PCA was built to solve that execution gap. We support businesses
-              that need a practical partner on the ground, especially across
-              African trade corridors where trust, local knowledge, and
-              coordination matter.
-            </p>
-
-            <p>
-              Our work sits between sourcing, procurement, logistics,
-              commodities, and market entry. That is why PCA is designed not as a
-              narrow procurement agency, but as a trade execution partner.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      {/* WHO WE ARE */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 max-w-3xl">
+          <div className="max-w-4xl">
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
-              PCA Group direction
+              Who we are
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
-              From procurement support to African trade infrastructure.
+              Built for businesses navigating real African trade complexity.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Procure Consult Africa is part of the wider PCA Group vision: a
-              structured ecosystem for sourcing, trade, logistics, commodities,
-              and market access across Africa.
+              African trade presents major opportunity, but execution can be
+              fragmented. Supplier uncertainty, logistics coordination,
+              documentation issues, unclear communication, and local market
+              realities often create friction.
+            </p>
+
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              PCA exists to reduce that friction by helping clients structure
+              sourcing decisions, coordinate procurement steps, manage logistics
+              pathways, and approach execution with better visibility.
             </p>
           </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {pillars.map((pillar) => {
-              const Icon = pillar.icon;
-
-              return (
-                <Card key={pillar.title} className="border-slate-200 bg-white">
-                  <CardContent className="p-5">
-                    <Icon className="mb-6 h-9 w-9 text-[#FF7A00]" />
-                    <h3 className="text-xl font-bold text-[#040237]">
-                      {pillar.title}
-                    </h3>
-                    <p className="mt-4 leading-7 text-slate-600">
-                      {pillar.text}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
         </div>
       </section>
 
+      {/* PILLARS */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
-          <Card className="border-slate-200 lg:col-span-2">
-            <CardContent className="p-5">
-              <Network className="mb-6 h-10 w-10 text-[#FF7A00]" />
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
+          {pillars.map((pillar) => {
+            const Icon = pillar.icon;
 
-              <h2 className="text-3xl font-bold text-[#040237]">
-                Who we serve
-              </h2>
+            return (
+              <Card
+                key={pillar.title}
+                className="border-slate-200 shadow-lg transition hover:-translate-y-1 hover:border-[#FF7A00] hover:shadow-2xl"
+              >
+                <CardContent className="p-6">
+                  <Icon className="mb-6 h-10 w-10 text-[#FF7A00]" />
 
-              <p className="mt-4 leading-7 text-slate-600">
-                PCA supports African SMEs, diaspora businesses, commodity
-                buyers, retail and wholesale traders, and international
-                companies looking to source, move, or expand across African
-                markets.
-              </p>
+                  <h3 className="text-2xl font-bold text-[#040237]">
+                    {pillar.title}
+                  </h3>
 
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                {[
-                  "African businesses sourcing cheaper goods",
-                  "Diaspora businesses needing local execution",
-                  "Commodity buyers seeking supply access",
-                  "International companies entering African markets",
-                  "Wholesale and retail traders",
-                  "Businesses moving goods across borders",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <BadgeCheck className="mt-1 h-5 w-5 text-[#FF7A00]" />
-                    <p className="text-slate-700">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-[#FF7A00] bg-[#040237] text-white">
-            <CardContent className="p-5">
-              <Handshake className="mb-6 h-10 w-10 text-[#FF7A00]" />
-
-              <h3 className="text-2xl font-bold">
-                Our promise is execution clarity.
-              </h3>
-
-              <p className="mt-4 leading-7 text-white/70">
-                We do not position PCA as a company that simply gives advice.
-                Our focus is helping clients understand what needs to happen,
-                then supporting the process from request to execution.
-              </p>
-
-              <Button asChild className="mt-8 bg-[#FF7A00] hover:bg-[#e66e00]">
-                <Link href="/services">
-                  Explore Services
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
+                  <p className="mt-4 leading-7 text-slate-600">
+                    {pillar.text}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
-      <section className="bg-[#040237] px-6 py-16 text-white lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-          <div>
-            <Building2 className="mb-6 h-10 w-10 text-[#FF7A00]" />
+      {/* TRUST SECTION */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/logistics-bg.jpg')] bg-cover bg-center opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/85" />
 
-            <h2 className="text-4xl font-bold tracking-tight">
-              Built for the realities of African trade.
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:px-10">
+          <div>
+            <ShieldCheck className="mb-6 h-10 w-10 text-[#FF7A00]" />
+
+            <h2 className="text-4xl font-bold tracking-tight text-[#040237]">
+              Why businesses choose PCA
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-white/70">
-              African trade is opportunity-rich but operationally demanding.
-              PCA is built around the practical reality that buyers need more
-              than access. They need trust, coordination, communication, and
-              local execution.
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Businesses do not need more generic promises. They need clearer
+              execution pathways, better local coordination, stronger sourcing
+              visibility, and disciplined communication.
             </p>
           </div>
 
-          <div className="grid gap-4">
-            {values.map((value) => (
+          <div className="space-y-5">
+            {trustPoints.map((item) => (
               <div
-                key={value}
-                className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 p-5"
+                key={item}
+                className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
               >
                 <BadgeCheck className="mt-1 h-5 w-5 text-[#FF7A00]" />
-                <p className="text-white/75">{value}</p>
+                <p className="text-slate-700">{item}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/industries-bg.jpg')] bg-cover bg-center opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/85 via-[#040237]/55 to-[#040237]/30" />
+
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-14 text-white sm:px-8 lg:flex-row lg:items-center lg:px-10">
+          <div>
+            <h2 className="text-4xl font-bold tracking-tight">
+              Ready to work with PCA?
+            </h2>
+
+            <p className="mt-4 max-w-2xl text-white/80">
+              Start with a sourcing request or speak with our team about your
+              procurement, logistics, commodity, or Africa market execution
+              needs.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#FF7A00] hover:bg-[#e66e00]"
+            >
+              <Link href="/start-sourcing-request">
+                Start Request
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/25 bg-white/10 text-white hover:bg-white hover:text-[#040237]"
+            >
+              <Link href="/contact">Speak to PCA</Link>
+            </Button>
           </div>
         </div>
       </section>

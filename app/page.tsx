@@ -272,8 +272,8 @@ export default function Home() {
 
       {/* PROBLEM */}
   <section className="relative mt-4 overflow-hidden rounded-[1.75rem] bg-[#040237] px-5 py-12 text-white shadow-2xl sm:px-8 lg:px-10">
-  <div className="absolute inset-0 bg-[url('/images/trade-bg.png')] bg-cover bg-center opacity-25" />
-  <div className="absolute inset-0 bg-gradient-to-r from-[#040237] via-[#040237]/90 to-[#040237]/70" />
+  <div className="absolute inset-0 bg-[url('/images/trade-bg.jpg')] bg-cover bg-center opacity-65" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/80 via-[#040237]/60 to-[#040237]/35" />
   <div className="relative">  </div>
         <div className="mx-auto max-w-7xl">
           <motion.div
@@ -287,10 +287,10 @@ export default function Home() {
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               The trade problem
             </p>
-            <h2 className="text-4xl font-bold tracking-tight text-[#040237] md:text-4xl">
+            <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-4xl">
               Cross-border trade should not feel this difficult.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+           <p className="mt-6 text-lg leading-8 text-white/90 drop-shadow-md">
               Finding the right supplier, negotiating prices, coordinating
               payments, moving goods, clearing customs, and confirming delivery
               can quickly become overwhelming. PCA helps reduce that friction
@@ -326,8 +326,8 @@ export default function Home() {
       </section>
             {/* SERVICES */}
       <section className="relative mt-4 overflow-hidden rounded-[1.75rem] bg-[#040237] px-5 py-12 text-white shadow-2xl sm:px-8 lg:px-10">
-        <div className="absolute inset-0 bg-[url('/images/trade-bg.png')] bg-cover bg-center opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040237] via-[#040237]/90 to-[#040237]/70" />
+        <div className="absolute inset-0 bg-[url('/images/trade-bg.jpg')] bg-cover bg-center opacity-65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/80 via-[#040237]/60 to-[#040237]/35" />
 
         <div className="relative mx-auto max-w-7xl">
           <motion.div
@@ -339,7 +339,7 @@ export default function Home() {
             className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end"
           >
             <div className="max-w-3xl">
-              <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
+             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FFD08A] drop-shadow-sm">
                 What we do
               </p>
 
@@ -400,9 +400,10 @@ export default function Home() {
       </section>
 
       {/* INDUSTRIES */}
-            <section className="relative mt-4 overflow-hidden rounded-[1.75rem] bg-[#040237] px-5 py-12 text-white shadow-2xl sm:px-8 lg:px-10">
-        <div className="absolute inset-0 bg-[url('/images/industries-bg.png')] bg-cover bg-center opacity-45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040237] via-[#040237]/85 to-[#040237]/65" />
+      {/* INDUSTRIES */}
+      <section className="relative mt-4 overflow-hidden rounded-[1.75rem] bg-[#040237] px-5 py-12 text-white shadow-2xl sm:px-8 lg:px-10">
+        <div className="absolute inset-0 bg-[url('/images/industries-bg.jpg')] bg-cover bg-center opacity-65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/75 via-[#040237]/50 to-[#040237]/30" />
 
         <div className="relative mx-auto max-w-7xl">
           <motion.div
@@ -416,6 +417,7 @@ export default function Home() {
             <p className="mb-4 text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
               Industries
             </p>
+
             <h2 className="text-4xl font-bold tracking-tight md:text-4xl">
               Focus sectors for sourcing and trade execution.
             </h2>
@@ -455,7 +457,7 @@ export default function Home() {
 
       {/* PROCESS */}
       <section className="mt-4 rounded-[1.75rem] bg-white px-5 py-12 shadow-lg sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -499,8 +501,8 @@ export default function Home() {
 
       {/* DIASPORA CTA */}
            <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
-        <div className="absolute inset-0 bg-[url('/images/market-entry-bg.png')] bg-cover bg-center opacity-45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040237] via-[#040237]/88 to-[#040237]/65" />
+        <div className="absolute inset-0 bg-[url('/images/market-entry-bg.jpg')] bg-cover bg-center opacity-65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040237]/75 via-[#040237]/45 to-[#040237]/25" />
 
         <motion.div
           initial="hidden"
@@ -593,28 +595,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-4 rounded-[1.75rem] bg-[#FF7A00] px-5 py-12 text-white shadow-2xl sm:px-8 lg:px-10">
+           <section className="relative mt-4 overflow-hidden rounded-[1.75rem] shadow-2xl">
+        <div className="absolute inset-0 bg-[url('/images/market-entry-bg.jpg')] bg-cover bg-center opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/80 via-[#FF7A00]/55 to-[#040237]/35" />
+
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           transition={transition}
-          className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 lg:flex-row lg:items-center"
+          className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-14 sm:px-8 lg:flex-row lg:items-center lg:px-10"
         >
           <div>
-            <h2 className="text-4xl font-bold tracking-tight">
+            <h2 className="text-4xl font-bold tracking-tight text-white">
               Ready to source, buy, move or expand across Africa?
             </h2>
-            <p className="mt-4 max-w-2xl text-white/85">
-              Start with a sourcing request and our team will review your needs.
+
+            <p className="mt-4 max-w-2xl text-white/85 text-lg leading-8">
+              Start with a sourcing request and our team will review your needs,
+              structure the process, and guide execution.
             </p>
           </div>
 
-          <Button asChild size="lg" className="bg-[#040237] hover:bg-[#09065a]">
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#040237] hover:bg-[#09065a]"
+          >
             <Link href="/start-sourcing-request">
-              Start Your Request <ArrowRight className="ml-2 h-5 w-5" />
+              Start Your Request
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </motion.div>
