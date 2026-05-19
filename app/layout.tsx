@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 export const metadata = {
   metadataBase: new URL("https://procureconsultafrica.com"),
